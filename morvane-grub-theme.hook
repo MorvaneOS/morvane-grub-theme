@@ -1,0 +1,14 @@
+# The MorvaneOS installer copies the theme to /boot/grub/themes/morvane, where
+# GRUB can read it even when the root partition is encrypted. Keep that copy in
+# step with this package. Systems without the copy are left alone.
+
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = usr/share/grub/themes/morvane/*
+
+[Action]
+Description = Updating the MorvaneOS GRUB theme in /boot...
+When = PostTransaction
+Exec = /bin/sh -c 'if [ -d /boot/grub/themes/morvane ]; then cp -rf /usr/share/grub/themes/morvane/. /boot/grub/themes/morvane/; fi'

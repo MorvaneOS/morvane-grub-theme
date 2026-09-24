@@ -1,0 +1,8 @@
+MorvaneOS GRUB theme
+
+TODO: choose a license for the theme artwork (theme.txt, the images and
+tools/build.py), to match whatever MorvaneOS/assets uses.
+
+The fonts (theme/jetbrains_mono_*.pf2) are converted from JetBrains Mono,
+Copyright 2020 The JetBrains Mono Project Authors, and are licensed under the
+SIL Open Font License, Version 1.1. See OFL.txt.
