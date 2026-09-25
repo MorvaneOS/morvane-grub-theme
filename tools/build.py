@@ -104,7 +104,7 @@ def build_fonts() -> None:
 
 
 def build_logo() -> None:
-	src = ASSETS / 'svg' / 'mark-pastel.svg'
+	src = ASSETS / 'svg' / 'mark' / 'pastel.svg'
 	if not src.exists():
 		sys.exit(f'Logo not found: {src} (pass the MorvaneOS/assets path as an argument)')
 	subprocess.run(['rsvg-convert', '-w', '112', '-h', '112', '-o', str(OUT / 'logo.png'), str(src)], check=True)
